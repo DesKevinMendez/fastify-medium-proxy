@@ -2,10 +2,15 @@ org: deskevinmendez
 app: my-medium-proxy
 service: fastify-proxy
 frameworkVersion: '2'
+plugins:
+  - serverless-deployment-bucket
 provider:
   name: aws
   runtime: nodejs14.x
   lambdaHashingVersion: 20200924
+  deploymentBucket:
+    name: my-medium-proxy
+    serverSideEncryption: AES256
 
 functions:
   proxy:

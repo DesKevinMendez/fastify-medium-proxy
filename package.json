@@ -24,11 +24,12 @@
   },
   "homepage": "https://github.com/DesKevinMendez/fastify-medium-proxy#readme",
   "devDependencies": {
-    "git-cz": "^4.8.0"
+    "git-cz": "^4.8.0",
+    "serverless-deployment-bucket": "^1.5.1",
+    "commitizen": "^4.2.4"
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "commitizen": "^4.2.4",
     "fastify": "^3.24.1",
     "serverless-http": "^2.7.0",
     "xml2js": "^0.4.23"
