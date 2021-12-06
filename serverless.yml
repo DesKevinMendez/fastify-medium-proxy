@@ -1,4 +1,6 @@
-service: aws
+org: deskevinmendez
+app: my-medium-proxy
+service: fastify-proxy
 frameworkVersion: '2'
 provider:
   name: aws
