@@ -10,6 +10,6 @@ functions:
     handler: index.handler
     events:
       - http:
-          path: /api/v1/posts
+          path: /
           method: get
           cors: true
