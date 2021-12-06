@@ -1,0 +1,15 @@
+service: aws
+frameworkVersion: '2'
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20200924
+
+functions:
+  proxy:
+    handler: index.handler
+    events:
+      - http:
+          path: /api/v1/posts
+          method: get
+          cors: true
