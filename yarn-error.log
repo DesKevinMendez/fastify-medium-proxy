@@ -1,0 +1,60 @@
+Arguments: 
+  /Users/kevin-air/.nvm/versions/node/v16.10.0/bin/node /Users/kevin-air/.nvm/versions/node/v16.10.0/bin/yarn add commitizen gitcz -D
+
+PATH: 
+  /Users/kevin-air/.nvm/versions/node/v16.10.0/bin:/Users/kevin-air/.rvm/gems/ruby-2.7.3/bin:/Users/kevin-air/.rvm/gems/ruby-2.7.3@global/bin:/Users/kevin-air/.rvm/rubies/ruby-2.7.3/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/kevin-air/.rvm/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.10.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/gitcz: Not found
+      at Request.params.callback [as _callback] (/Users/kevin-air/.nvm/versions/node/v16.10.0/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/Users/kevin-air/.nvm/versions/node/v16.10.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (/Users/kevin-air/.nvm/versions/node/v16.10.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (/Users/kevin-air/.nvm/versions/node/v16.10.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "my-web-medium-proxy",
+    "version": "0.1.0",
+    "description": "This is a project that contain code for get all medium post",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/DesKevinMendez/fastify-medium-proxy.git"
+    },
+    "keywords": [
+      "fastify",
+      "medium",
+      "proxy",
+      "serverless"
+    ],
+    "author": "Kevin Méndez <email>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/DesKevinMendez/fastify-medium-proxy/issues"
+    },
+    "homepage": "https://github.com/DesKevinMendez/fastify-medium-proxy#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
