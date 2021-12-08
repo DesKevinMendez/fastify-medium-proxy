@@ -11,9 +11,8 @@ jobs:
         env:
           CI: true
         run: |
-          npm install -g yarn
-          yarn install
-          yarn add -g serverless
+          npm install -g yarn serverless
+          npm install
       - name: Login into AWS
         run: |
           serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
