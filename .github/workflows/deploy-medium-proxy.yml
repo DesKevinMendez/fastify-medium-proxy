@@ -13,9 +13,12 @@ jobs:
         run: |
           npm install -g yarn serverless
           npm install
-      - name: Login into AWS
+      - name: Login into AWS and deploy
         run: |
+          echo "Login into"
+          echo "=========="
           serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Deploy lambda
-        run: sls deploy
+          echo "Deploy"
+          echo "=========="
+          serverless deploy
 
