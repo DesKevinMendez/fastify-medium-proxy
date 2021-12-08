@@ -15,3 +15,4 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: fastify-proxy-dev-proxy
           source: ./index.js
+          zip_file: fastify-proxy.zip
