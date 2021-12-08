@@ -7,12 +7,16 @@ jobs:
     steps:
       - name: checkout source code
         uses: actions/checkout@v1
-      - name: default deploy
-        uses: appleboy/lambda-action@master
-        with:
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: ${{ secrets.AWS_REGION }}
-          function_name: fastify-proxy-dev-proxy
-          source: ./index.js
-          zip_file: fastify-proxy.zip
+      - name: Install dependencies
+        env:
+          CI: true
+        run: |
+          npm install -g yarn
+          yarn install
+          yarn add -g serverless
+      - name: Login into AWS
+        run: |
+          serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Deploy lambda
+        run: sls deploy
+
