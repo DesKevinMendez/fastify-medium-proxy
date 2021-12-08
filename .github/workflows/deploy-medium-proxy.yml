@@ -9,9 +9,9 @@ jobs:
         uses: actions/checkout@v1
       - name: Install dependencies
         run: |
-          npm install -g yarn serverless
+          npm install -g serverless
           npm install
-      - name: Login into AWS and deploy
+      - name: Deploy
         env:
           SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         run: |
