@@ -8,13 +8,12 @@ jobs:
       - name: checkout source code
         uses: actions/checkout@v1
       - name: Install dependencies
-        env:
-          CI: true
-          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         run: |
           npm install -g yarn serverless
           npm install
       - name: Login into AWS and deploy
+        env:
+          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         run: |
           serverless deploy
 
